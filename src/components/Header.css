@@ -1,0 +1,31 @@
+.header {
+  margin-bottom: 25px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #666;
+}
+
+.theme-button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f1f1f1;
+  font-weight: 600;
+}
+
+.theme-button:hover {
+  background: #e5e5e5;
+}
