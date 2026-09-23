@@ -1,4 +1,3 @@
-
 import "./TaskForm.css";
 import { useState } from "react";
 
@@ -27,14 +26,20 @@ function TaskForm({ onAddTask }) {
       <h2>Add New Task</h2>
 
       <form onSubmit={handleSubmit} className="task-form">
+        <label htmlFor="task-title">Task title</label>
+
         <input
+          id="task-title"
           type="text"
           placeholder="Enter your task..."
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
 
+        <label htmlFor="task-category">Category</label>
+
         <select
+          id="task-category"
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         >
