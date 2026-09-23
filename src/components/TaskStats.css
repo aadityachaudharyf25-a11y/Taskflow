@@ -11,16 +11,28 @@
   border-radius: 10px;
   text-align: center;
   border: 1px solid #e5e5e5;
+  transition: 0.2s;
 }
 
 .stat-card h3 {
   font-size: 28px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 
 .stat-card p {
+  margin: 0;
   color: #666;
   font-size: 14px;
+}
+
+/* Dark mode */
+.app.dark .stat-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.app.dark .stat-card p {
+  color: #9ca3af;
 }
 
 @media (max-width: 600px) {
@@ -28,3 +40,4 @@
     grid-template-columns: 1fr;
   }
 }
+
