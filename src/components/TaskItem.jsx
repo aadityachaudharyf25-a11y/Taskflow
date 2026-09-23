@@ -31,7 +31,9 @@ function TaskItem({ task, onToggle, onDelete, onEdit }) {
         <button
           className="check-button"
           onClick={() => onToggle(task.id)}
-          aria-label="Toggle task"
+          aria-label={`Mark ${task.title} as ${
+            task.completed ? "active" : "completed"
+          }`}
         >
           {task.completed ? "✓" : "○"}
         </button>
@@ -67,11 +69,19 @@ function TaskItem({ task, onToggle, onDelete, onEdit }) {
       <div className="task-actions">
         {isEditing ? (
           <>
-            <button className="edit-button" onClick={handleSave}>
+            <button
+              className="edit-button"
+              onClick={handleSave}
+              aria-label={`Save changes to ${task.title}`}
+            >
               Save
             </button>
 
-            <button className="delete-button" onClick={handleCancel}>
+            <button
+              className="delete-button"
+              onClick={handleCancel}
+              aria-label={`Cancel editing ${task.title}`}
+            >
               Cancel
             </button>
           </>
@@ -80,6 +90,7 @@ function TaskItem({ task, onToggle, onDelete, onEdit }) {
             <button
               className="edit-button"
               onClick={() => setIsEditing(true)}
+              aria-label={`Edit ${task.title}`}
             >
               Edit
             </button>
@@ -87,6 +98,7 @@ function TaskItem({ task, onToggle, onDelete, onEdit }) {
             <button
               className="delete-button"
               onClick={() => onDelete(task.id)}
+              aria-label={`Delete ${task.title}`}
             >
               Delete
             </button>
