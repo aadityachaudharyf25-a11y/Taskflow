@@ -110,6 +110,47 @@
   background: #fecaca;
 }
 
+/* Dark mode */
+.app.dark .task-item {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.app.dark .check-button {
+  background: #111827;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.app.dark .check-button:hover {
+  background: #374151;
+}
+
+.app.dark .task-item.completed .task-content h3 {
+  color: #9ca3af;
+}
+
+.app.dark .task-content input,
+.app.dark .task-content select {
+  background: #111827;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.app.dark .edit-button {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.app.dark .edit-button:hover {
+  background: #4b5563;
+}
+
+.app.dark .category {
+  background: #312e81;
+  color: #c7d2fe;
+}
+
 @media (max-width: 600px) {
   .task-item {
     flex-direction: column;
